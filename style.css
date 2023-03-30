@@ -318,47 +318,6 @@ footer a {
   text-align: justify;
 }
 
-form {
-  accent-color: var(--color-secundary);
-}
-.contact-form {
-  padding: 2em;
-  border: 2px solid var(--color-primary);
-  border-width: 0 5px;
-  border-radius: 20px;
-
-  width: 80%;
-  max-width: 700px;
-}
-
-.form-row label {
-  display: block;
-  margin: 0.3em 0;
-
-  font-weight: 600;
-}
-
-.form-input {
-  width: 100%;
-  padding: 0.4em 0.5em;
-  background-color: #f9f9f9ec;
-
-  border: 1px solid var(--color-primary);
-  border-radius: 5px;
-
-  font-size: 0.8em;
-}
-
-.form-input:focus,
-.form-input:focus-visible {
-  border: none;
-  outline: 1px solid var(--color-secundary);
-}
-
-.form-text {
-  resize: vertical;
-}
-
 .button {
   padding: 0.4em 1.6em;
   font-size: 1em;
