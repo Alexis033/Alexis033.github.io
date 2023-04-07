@@ -95,7 +95,7 @@ nav {
 }
 
 .section-title {
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-decoration: underline var(--color-secundary);
   text-align: center;
 }
@@ -103,7 +103,7 @@ nav {
 .section-subtitle {
   margin: 1em auto;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 figure {
