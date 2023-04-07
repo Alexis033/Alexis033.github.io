@@ -182,6 +182,12 @@ figure {
   object-fit: cover;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .perfil__content {
   flex-basis: 60%;
   flex-grow: 1;
