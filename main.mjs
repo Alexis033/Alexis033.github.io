@@ -35,10 +35,12 @@ $modeButton.addEventListener("click", () => {
   const nav = document.querySelector("nav");
   const aside = document.querySelector(".aside-perfil");
   const icon = document.querySelector(".icon-m");
+  const footer = document.querySelector("footer");
 
   icon.classList.toggle("fa-moon");
   icon.classList.toggle("fa-sun");
   body.classList.toggle("dark-mode");
   nav.classList.toggle("dark-mode-nav");
   aside.classList.toggle("dark-mode-aside-perfil");
+  footer.classList.toggle("dark-color");
 });

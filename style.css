@@ -394,6 +394,10 @@ footer a {
     background-color: var(--color-background);
     color: var(--color-primary);
   }
+
+  footer {
+    color: var(--color-background);
+  }
 }
 
 .dark-mode {
@@ -409,6 +413,10 @@ footer a {
 .dark-mode-aside-perfil {
   background-color: var(--color-background);
   color: var(--color-primary);
+}
+
+.dark-color {
+    color: var(--color-background);
 }
 
 .button-mode {
