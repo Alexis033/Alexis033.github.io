@@ -15,7 +15,7 @@ $navButton.addEventListener("click", () => {
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && window.innerWidth > 500) {
       entry.target.classList.add("typewriter-effect");
       observer.unobserve(entry.target);
     } else {

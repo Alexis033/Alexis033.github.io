@@ -95,7 +95,7 @@ nav {
 }
 
 .section-title {
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-decoration: underline var(--color-secundary);
   text-align: center;
 }
@@ -416,7 +416,7 @@ footer a {
 }
 
 .dark-color {
-    color: var(--color-background);
+  color: var(--color-background);
 }
 
 .button-mode {
