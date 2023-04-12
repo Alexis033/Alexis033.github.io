@@ -206,9 +206,11 @@ figure {
 .container-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: min-content;
   grid-template-areas:
     "principal principal principal principal"
-    "project-a project-a project-b project-b";
+    "project-a project-a project-b project-b"
+    "project-c project-c project-d project-d";
   gap: 20px;
 }
 
@@ -220,6 +222,9 @@ figure {
 }
 .project-b {
   grid-area: project-b;
+}
+.project-c {
+  grid-area: project-c;
 }
 
 .project {
@@ -354,7 +359,8 @@ footer a {
     grid-template-areas:
       "principal principal principal principal"
       "project-a project-a project-a project-a"
-      "project-b project-b project-b project-b";
+      "project-b project-b project-b project-b"
+      "project-c project-c project-c project-c";
   }
 
   nav {
