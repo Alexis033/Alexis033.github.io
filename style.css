@@ -226,6 +226,9 @@ figure {
 .project-c {
   grid-area: project-c;
 }
+.project-d {
+  grid-area: project-d;
+}
 
 .project {
   display: flex;
@@ -360,7 +363,8 @@ footer a {
       "principal principal principal principal"
       "project-a project-a project-a project-a"
       "project-b project-b project-b project-b"
-      "project-c project-c project-c project-c";
+      "project-c project-c project-c project-c"
+      "project-d project-d project-d project-d";
   }
 
   nav {
