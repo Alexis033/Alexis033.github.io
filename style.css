@@ -22,6 +22,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.disabled-link {
+  pointer-events: none;
+  color: gray;
+  text-decoration: none;
+  cursor: default;
+}
 
 body {
   margin: 0 auto;
@@ -195,6 +201,13 @@ figure {
   padding: 1em;
 }
 
+.container-cvbutton {
+  display: flex;
+  padding-block: 1.5em;
+  justify-content: center;
+  color: #18181b;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -326,14 +339,14 @@ footer a {
 }
 
 .button {
-  padding: 0.4em 1.6em;
+  padding: 0.4em 1.3em;
   font-size: 1em;
   font-weight: 600;
 
   background-color: var(--color-secundary);
 
   border: 1px solid #eab308;
-  border-radius: 40px;
+  border-radius: 6px;
   cursor: pointer;
 
   box-shadow: 1px 1px 3px #00000080;
@@ -386,6 +399,7 @@ footer a {
 
   .nav-button {
     display: inline-block;
+    border-radius: 40px;
   }
 }
 
@@ -434,4 +448,8 @@ footer a {
   border: none;
   color: inherit;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
