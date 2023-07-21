@@ -9,6 +9,7 @@ $navLinks.forEach((li) => {
     $navItems.classList.toggle("show");
   });
 });
+
 $navButton.addEventListener("click", () => {
   $navItems.classList.toggle("show");
 });
