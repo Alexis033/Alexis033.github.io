@@ -65,7 +65,7 @@ nav {
 .nav-links {
   align-items: center;
   display: flex;
-  gap: 0.5rem;
+  gap: 1.5rem;
 
   transition: all 0.5s ease;
 }
@@ -389,6 +389,7 @@ footer a {
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
 
     height: 0vh;
     overflow: hidden;
