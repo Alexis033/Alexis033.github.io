@@ -39,6 +39,28 @@ body {
 
   transition: all 0.3s ease-in-out;
 }
+.button {
+  padding: 0.4em 1.3em;
+  font-size: 1em;
+  font-weight: 600;
+
+  background-color: var(--color-secondary);
+
+  border: 1px solid #eab308;
+  border-radius: 6px;
+  cursor: pointer;
+
+  box-shadow: 1px 1px 3px #00000080;
+}
+
+.button:hover {
+  background-color: #fde047;
+}
+
+.button:active {
+  transform: scale(0.99, 0.99);
+  box-shadow: none;
+}
 
 nav {
   padding: 0.5rem 2rem;
@@ -60,6 +82,13 @@ nav {
 .nav-head {
   display: flex;
   justify-content: space-between;
+}
+.nav__logo-link {
+  display: grid;
+  place-items: center;
+}
+.nav__logo {
+  height: 30px;
 }
 
 .nav-links {
@@ -362,29 +391,6 @@ footer a {
   text-align: justify;
 }
 
-.button {
-  padding: 0.4em 1.3em;
-  font-size: 1em;
-  font-weight: 600;
-
-  background-color: var(--color-secondary);
-
-  border: 1px solid #eab308;
-  border-radius: 6px;
-  cursor: pointer;
-
-  box-shadow: 1px 1px 3px #00000080;
-}
-
-.button:hover {
-  background-color: #fde047;
-}
-
-.button:active {
-  transform: scale(0.99, 0.99);
-  box-shadow: none;
-}
-
 @media (max-width: 500px) {
   /* .project__description{
   display: none;
@@ -429,8 +435,10 @@ footer a {
   }
 
   .nav-button {
-    display: inline-block;
-    border-radius: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    padding: 0.4em 1em;
   }
 }
 
