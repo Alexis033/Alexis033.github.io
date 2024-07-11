@@ -237,6 +237,26 @@ figure {
   color: #18181b;
 }
 
+.experience {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+
+  div:first-child{
+    flex-basis: 200px;
+    max-width: max-content;
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+  div:nth-child(2){
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+  }
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -430,7 +450,7 @@ footer a {
   }
 
   .nav-links.show {
-    height: 130px;
+    height: 150px;
     opacity: 1;
     margin-top: 1rem;
   }
@@ -440,6 +460,13 @@ footer a {
     place-content: center;
     border-radius: 10px;
     padding: 0.4em 1em;
+  }
+  .experience {
+    flex-direction: column;
+    gap: 0.5rem;
+    div:first-child {
+      flex-basis: auto;
+    }
   }
 }
 
