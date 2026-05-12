@@ -29,6 +29,7 @@ observer.observe($animatedElement);
 
 window.addEventListener("unload", () => {
   observer.disconnect();
+  revealObserver.disconnect();
 });
 
 $modeButton.addEventListener("click", () => {
@@ -62,3 +63,16 @@ if (
   aside.classList.toggle("dark-mode-aside-perfil");
   footer.classList.toggle("dark-color");
 }
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("reveal");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".section").forEach((section) => {
+  revealObserver.observe(section);
+});
