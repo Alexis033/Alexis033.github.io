@@ -405,8 +405,9 @@ figure { margin-bottom: 1em; }
   grid-auto-rows: min-content;
   grid-template-areas:
     "principal principal principal principal"
-    "project-a project-a project-b project-b"
-    "project-c project-c project-d project-d";
+    "project-e  project-e  project-e  project-e"
+    "project-a  project-a  project-b  project-b"
+    "project-c  project-c  project-c  project-c";
   gap: 24px;
   width: 100%;
 }
@@ -415,7 +416,7 @@ figure { margin-bottom: 1em; }
 .project-a { grid-area: project-a; }
 .project-b { grid-area: project-b; }
 .project-c { grid-area: project-c; }
-.project-d { grid-area: project-d; }
+.project-e { grid-area: project-e; }
 
 .project {
   display: flex;
@@ -617,10 +618,10 @@ footer a:hover {
   .container-grid {
     grid-template-areas:
       "principal principal principal principal"
-      "project-a project-a project-a project-a"
-      "project-b project-b project-b project-b"
-      "project-c project-c project-c project-c"
-      "project-d project-d project-d project-d";
+      "project-e  project-e  project-e  project-e"
+      "project-a  project-a  project-a  project-a"
+      "project-b  project-b  project-b  project-b"
+      "project-c  project-c  project-c  project-c";
   }
 
   nav {
