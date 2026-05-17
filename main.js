@@ -32,37 +32,18 @@ window.addEventListener("unload", () => {
   revealObserver.disconnect();
 });
 
-$modeButton.addEventListener("click", () => {
-  const body = document.body;
-  const nav = document.querySelector("nav");
-  const aside = document.querySelector(".aside-perfil");
+function toggleDark(force) {
+  document.body.classList.toggle("dark-mode", force);
+  document.querySelector("nav").classList.toggle("dark-mode-nav", force);
+  document.querySelector(".aside-perfil").classList.toggle("dark-mode-aside-perfil", force);
+  document.querySelector("footer").classList.toggle("dark-color", force);
   const icon = document.querySelector(".icon-m");
-  const footer = document.querySelector("footer");
-
-  icon.classList.toggle("fa-moon");
-  icon.classList.toggle("fa-sun");
-  body.classList.toggle("dark-mode");
-  nav.classList.toggle("dark-mode-nav");
-  aside.classList.toggle("dark-mode-aside-perfil");
-  footer.classList.toggle("dark-color");
-});
-if (
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches
-) {
-  const body = document.body;
-  const nav = document.querySelector("nav");
-  const aside = document.querySelector(".aside-perfil");
-  const icon = document.querySelector(".icon-m");
-  const footer = document.querySelector("footer");
-
-  icon.classList.toggle("fa-moon");
-  icon.classList.toggle("fa-sun");
-  body.classList.toggle("dark-mode");
-  nav.classList.toggle("dark-mode-nav");
-  aside.classList.toggle("dark-mode-aside-perfil");
-  footer.classList.toggle("dark-color");
+  icon.classList.toggle("fa-moon", !force);
+  icon.classList.toggle("fa-sun", force);
 }
+
+$modeButton.addEventListener("click", () => toggleDark());
+if (window.matchMedia?.("(prefers-color-scheme: dark)").matches) toggleDark(true);
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

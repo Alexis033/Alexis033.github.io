@@ -116,7 +116,7 @@ function renderHero(filter) {
           <span class="mockup-dot" style="background:#22c55e"></span>
           <span class="mockup-url">${new URL(project.demo).hostname}</span>
         </div>
-        <img class="mockup-img" src="${project.img}" alt="${project.imgAlt}" loading="lazy">
+        <img class="mockup-img" src="${project.img}" alt="${project.imgAlt}" loading="lazy" width="520" height="260">
       </a>
     </div>
   `;
@@ -155,7 +155,7 @@ function renderGrid(filter, excludeId) {
   container.innerHTML = filtered.map(p => `
     <div class="project-card" data-project="${p.id}">
       <div class="project-card__img-wrap">
-        <img class="project-card__img" src="${p.img}" alt="${p.imgAlt}" loading="lazy">
+        <img class="project-card__img" src="${p.img}" alt="${p.imgAlt}" loading="lazy" width="360" height="180">
         <div class="project-card__overlay"><i class="fa-solid fa-expand"></i></div>
       </div>
       <div class="project-card__body">
@@ -187,7 +187,7 @@ function renderModalContent(project) {
   return `
     <div class="modal-layout">
       <div class="modal-img-wrap">
-        <img class="modal-img" src="${project.img}" alt="${project.imgAlt}">
+        <img class="modal-img" src="${project.img}" alt="${project.imgAlt}" width="720" height="360">
       </div>
       <div class="modal-body">
         <h3 class="modal-title">${project.title}</h3>

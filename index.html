@@ -18,7 +18,13 @@
       content="https://alexis033.github.io/img/foto.jpg"
     />
     <meta property="og:url" content="https://alexis033.github.io" />
-    <link rel="icon" type="image/png" href="img/logo.jpg" />
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+    />
 
     <title>Maikcol Guevara Developer</title>
     <script
@@ -33,7 +39,7 @@
       <nav>
         <div class="nav-head">
           <a class="nav__logo-link" href="#about"
-            ><img class="nav__logo" src="img/logo.png" alt=""
+            ><img class="nav__logo" src="img/logo.png" alt="" width="32" height="32"
           /></a>
           <button class="nav-button button">
             <svg
@@ -82,10 +88,11 @@
                 href="https://www.linkedin.com/in/maikcol-guevara/"
                 target="_blank"
                 title="linkedin"
-                ><img
+                >              <img
                   class="aside-perfil__img"
                   src="img/foto.jpg"
                   alt="Photo Maikcol Guevara"
+                  width="180" height="180"
               /></a>
               <figcaption></figcaption>
             </figure>
@@ -280,9 +287,11 @@
       </ul>
     </footer>
     <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true">
-      <div class="modal-content">
+      <div class="modal-panel">
         <button class="modal-close" aria-label="Close">&times;</button>
-        <div id="modalBody"></div>
+        <div class="modal-scroll">
+          <div id="modalBody"></div>
+        </div>
       </div>
     </div>
 

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
-
 :root {
   --color-background: #f8fafc;
   --color-primary: #0f172a;
@@ -28,13 +26,6 @@
 
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
-
-.disabled-link {
-  pointer-events: none;
-  color: gray;
-  text-decoration: none;
-  cursor: default;
-}
 
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--color-background); }
@@ -691,21 +682,39 @@ figure { margin-bottom: 1em; }
   pointer-events: auto;
 }
 
-.modal-content {
+.modal-panel {
   background: var(--surface);
   border-radius: var(--radius-lg);
+  overflow: hidden;
   max-width: 720px;
   width: 100%;
   max-height: 90vh;
-  overflow-y: auto;
   position: relative;
   box-shadow: var(--shadow-xl);
   transform: scale(0.95) translateY(20px);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-overlay.open .modal-content {
+.modal-overlay.open .modal-panel {
   transform: scale(1) translateY(0);
+}
+
+.modal-scroll {
+  max-height: inherit;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.modal-scroll::-webkit-scrollbar { width: 6px; }
+.modal-scroll::-webkit-scrollbar-track { background: transparent; }
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-close {
@@ -899,8 +908,7 @@ footer a:hover {
   transform: translateY(-2px);
 }
 
-.center { text-align: center; margin-top: 2em; }
-.text-justify { text-align: justify; }
+
 
 @media (max-width: 700px) {
   .hero-project {
@@ -1056,5 +1064,3 @@ footer a:hover {
 }
 
 .button-mode i { font-size: 1.2em !important; }
-
-.hidden { display: none; }
