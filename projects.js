@@ -57,20 +57,23 @@ const projectsData = [
 ];
 
 const techMeta = {
-  React: { icon: 'fa-brands fa-react', color: 'rgb(8, 126, 164)', label: 'React' },
-  Bootstrap: { icon: 'fa-brands fa-bootstrap', color: 'rgb(120, 17, 247)', label: 'Bootstrap' },
-  Python: { icon: 'fa-brands fa-python', color: 'rgb(55, 118, 171)', label: 'Python' },
-  JavaScript: { icon: 'fa-brands fa-square-js', color: 'rgb(240, 219, 81)', label: 'JavaScript' },
-  HTML: { icon: 'fa-brands fa-html5', color: 'rgb(227, 79, 38)', label: 'HTML5' },
-  CSS: { icon: 'fa-brands fa-css3-alt', color: 'rgb(7, 74, 242)', label: 'CSS3' },
-  TypeScript: { icon: null, img: 'img/Typescript_logo.svg', label: 'TypeScript' },
-  MySQL: { icon: 'fa-solid fa-database', color: 'rgb(0, 123, 154)', label: 'MySQL' }
+  React: { icon: 'fa-brands fa-react', color: '#61DAFB', label: 'React' },
+  Bootstrap: { icon: 'fa-brands fa-bootstrap', color: '#7952B3', label: 'Bootstrap' },
+  Python: { icon: 'fa-brands fa-python', color: '#3776AB', label: 'Python', gradient: 'linear-gradient(135deg, #3776AB 50%, #FFD43B 50%)' },
+  JavaScript: { icon: 'fa-brands fa-square-js', color: '#F7DF1E', label: 'JavaScript' },
+  HTML: { icon: 'fa-brands fa-html5', color: '#E34F26', label: 'HTML5' },
+  CSS: { icon: 'fa-brands fa-css3-alt', color: '#1572B6', label: 'CSS3' },
+  TypeScript: { icon: null, img: 'img/Typescript_logo.svg', color: '#3178C6', label: 'TypeScript' },
+  MySQL: { icon: 'fa-solid fa-database', color: '#4479A1', label: 'MySQL' }
 };
 
 function techBadgeHTML(tech) {
   const meta = techMeta[tech];
-  const color = meta?.color || 'var(--muted)';
-  return `<span class="tech-badge" style="--badge-color: ${color}">${meta?.label || tech}</span>`;
+  if (!meta) return '';
+  if (meta.gradient) {
+    return `<span class="tech-badge tech-badge--dual">${meta.label}</span>`;
+  }
+  return `<span class="tech-badge" style="--badge-color: ${meta.color}">${meta.label}</span>`;
 }
 
 function techIconHTML(tech) {
